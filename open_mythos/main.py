@@ -4,16 +4,14 @@ Architecture: Prelude → [Looped Recurrent Block]×T → Coda
 MoE FFN (DeepSeek-style), GQA or MLA, RoPE, RMSNorm, KV cache, LTI-stable injection, ACT halting
 """
 
+import utils.transport
+import utils.session
 from dataclasses import dataclass
 from typing import Optional
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
-# ---------------------------------------------------------------------------
-# Config
-# ---------------------------------------------------------------------------
 
 
 @dataclass
